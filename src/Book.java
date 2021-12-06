@@ -1,22 +1,14 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class Book {
+public class Book extends  Section{
     private final String title;
     private final ArrayList<Chapter> chapterList = new ArrayList<Chapter>();
     private Author author;
-
+    private List<Author> authors;
     public Book(String title) {
-        this.title = title;
-    }
-
-    public int createChapter(String title) {
-        Chapter chapter = new Chapter(title);
-        chapterList.add(chapter);
-        return chapterList.size() - 1;
-    }
-
-    public Chapter getChapter(int index) {
-        return chapterList.get(index);
+        this.title = title; 
+        authors = new ArrayList<Author>();
     }
 
     public void addAuthor(Author author) {
