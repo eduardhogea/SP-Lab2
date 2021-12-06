@@ -8,4 +8,18 @@ public class Table implements Element {
     public void print() {
         System.out.println("Table with title: " + this.title);
     }
+
+    @Override
+    public void add(Element element) {
+
+
+    }
+
+    @Override
+    public void remove(Element element) {
+
+
+    }
+
+
 }

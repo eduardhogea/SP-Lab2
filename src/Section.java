@@ -1,20 +1,16 @@
 import java.util.ArrayList;
-import java.util.List;
-
 
 public class Section implements Element {
-    private String title;
-    private ArrayList<Element> elements;
+    protected String title;
+    protected ArrayList < Element > elements = new ArrayList < Element > ();
 
     public Section(String title) {
         this.title = title;
-        this.elements = new ArrayList<Element>();
     }
 
     @Override
     public void print() {
-        System.out.println(String.format( title));
-
+        System.out.println(this.title);
         this.elements.forEach(Element::print);
     }
 
@@ -27,11 +23,4 @@ public class Section implements Element {
     public void remove(Element element) {
         this.elements.remove(element);
     }
-
-    @Override
-    public Element get(int index) {
-        return this.elements.get(index);
-    }
-
-
 }
